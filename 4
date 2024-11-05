@@ -1,0 +1,13 @@
+num = 7 ** 170 + 7 ** 100
+
+def seven(a):
+    new = ''
+    while a > 0:
+        new = str(a % 7) + new
+        a //= 7
+    return new
+
+for i in range(0,2031):
+    n = seven(num - i)
+    if n.count('0') == 71:
+        print(i)
